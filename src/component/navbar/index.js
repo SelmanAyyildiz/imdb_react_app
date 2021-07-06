@@ -1,15 +1,21 @@
 
-import { useState } from "react";
+import { useState , useRef} from "react";
 import "./style.css";
 
 export const Navbar = ({setSearchKey}) => {
-    const [inputValue, setInputValue] = useState("")
+    const searchInputRef = useRef();
+
+    const handleKey =(e)=>{
+        if(e.key === 'Enter'){
+            setSearchKey(searchInputRef?.current?.value)
+        }
+    }
 
     return(
         
         <div className="navbar-wrapper">
-            <input  onChange={(e)=> setInputValue(e.target.value)}/>
-            <button onClick={()=>{setSearchKey(inputValue)}}>search</button>
+            <input  ref={searchInputRef} type="text" onKeyDown={handleKey}/>
+            <button onClick={()=>{setSearchKey(searchInputRef?.current?.value)}}>search</button>
         </div>
     )
 }
