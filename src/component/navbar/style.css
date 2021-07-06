@@ -1,0 +1,31 @@
+.navbar-wrapper{
+    height: 5rem;
+    width: 100%;
+    background-color: lightblue;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    top:0;
+}
+
+input {
+    width: 10rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+}
+
+button {
+    width: 4rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    border: none;
+    color:white;
+    background-color: red;
+    font-weight: bold;
+    
+}
