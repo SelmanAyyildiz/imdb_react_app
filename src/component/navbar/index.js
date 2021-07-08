@@ -1,5 +1,5 @@
 
-import { useState , useRef} from "react";
+import {useRef} from "react";
 import "./style.css";
 
 export const Navbar = ({setSearchKey}) => {
