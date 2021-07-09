@@ -1,7 +1,7 @@
 
 import "./style.css";
 import {useRef, useContext} from "react";
-import { movieContext } from "../../App";
+import { movieContext } from "../../Movie";
 
 export const Navbar = () => {
     const searchInputRef = useRef();

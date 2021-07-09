@@ -1,5 +1,5 @@
 import "./style.css"
-import { movieContext } from "../../App";
+import { movieContext } from "../../Movie";
 import { Card } from "../card";
 import { useContext } from "react";
 
