@@ -1,10 +1,16 @@
 import "./style.css"
+import { movieContext } from "../../App";
 import { Card } from "../card";
+import { useContext } from "react";
 
 const defaultImage ="https://image.freepik.com/free-vector/cinema-logo-with-popcorn_23-2147494040.jpg"
-export const CardList = ({ movieList, baseImageUrl }) => {
-  console.log("CARDLIST", movieList);
 
+
+
+
+export const CardList = () => {
+  const{ movieList, baseImageUrl } = useContext(movieContext);
+  console.log("CARDLIST", movieList);
   return (
     <div className="card-list-wrapper">
       {movieList?.map((movie, index) => {

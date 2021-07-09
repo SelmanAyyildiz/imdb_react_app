@@ -1,10 +1,11 @@
 
-import {useRef} from "react";
 import "./style.css";
+import {useRef, useContext} from "react";
+import { movieContext } from "../../App";
 
-export const Navbar = ({setSearchKey}) => {
+export const Navbar = () => {
     const searchInputRef = useRef();
-
+    const {setSearchKey} = useContext(movieContext)
     const handleKey =(e)=>{
         if(e.key === 'Enter'){
             setSearchKey(searchInputRef?.current?.value)

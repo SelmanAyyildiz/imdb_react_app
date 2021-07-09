@@ -1,7 +1,7 @@
 
 //import './App.css';
 import {CardList} from "./component/cardList"
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import {Navbar} from "./component/navbar"
 
@@ -9,7 +9,9 @@ const apiKey = "29b44dc404fcd29682c29a4d22da5c75";
 const baseUrl ="https://api.themoviedb.org/3/search/movie";
 const baseImageUrl = "https://image.tmdb.org/t/p/w300";
 
-
+export const movieContext = createContext();
+console.log("🚀 ~ file: App.js ~ line 13 ~ movieContext Provider", movieContext.Provider)
+console.log("🚀 ~ file: App.js ~ line 13 ~ movieContext Consumer" , movieContext.Consumer)
 function App() {
   const[movieList, setMovieList]=useState([])
   const [searchKey, setSearchKey]=useState("Allah")
@@ -30,14 +32,15 @@ function App() {
   return (
 
     <div className="App">
-     
-      <nav className="navbar"><Navbar setSearchKey={setSearchKey}/></nav>
+     <movieContext.Provider value={{movieList, baseImageUrl, setSearchKey}}>
+      <nav className="navbar"><Navbar /></nav>
       <header className="App-header"></header>
       <main>
-      <CardList movieList={movieList} baseImageUrl={baseImageUrl}
+      <CardList 
               
               />
       </main>
+      </movieContext.Provider>
     </div>
   );
 }
