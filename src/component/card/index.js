@@ -1,10 +1,12 @@
 import "./style.css";
+import { useHistory } from "react-router-dom";
 
-export const Card = ({ title, poster}) => {
+
+export const Card = ({ title, poster, id}) => {
 console.log("POSTER:", poster)
- 
+  const history = useHistory();
   return (
-    <div className="card-wrapper">
+    <div className="card-wrapper" onClick={()=>history.push(`/detail/${id}`)}>
     <img className="cardPoster" src={poster} alt={title + ".jpeg"}/>
       <p>{title}</p>
  
