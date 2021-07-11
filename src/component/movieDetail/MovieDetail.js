@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom';
-import './App.css'
+import '../../App.css'
 
 const apiKey = "29b44dc404fcd29682c29a4d22da5c75";
 const movieDetailBaseUrl = "https://api.themoviedb.org/3/movie/"

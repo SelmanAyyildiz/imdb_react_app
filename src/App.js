@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router,Route , Switch } from 'react-router-dom'
 import Fixbar from './component/navbar/fixbar'
 import Movie from './Movie'
-import MovieDetail from './MovieDetail'
+import MovieDetail from './component/movieDetail/MovieDetail'
 
 
 function App() {
