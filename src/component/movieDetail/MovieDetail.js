@@ -9,7 +9,7 @@ const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
  function MovieDetail() {
      const{id}=useParams();
-   const[movieDetail, setMovieDetail] = useState("null");
+   const[movieDetail, setMovieDetail] = useState([]);
     
    useEffect(() =>{
     axios.get(movieDetailBaseUrl+id,{
@@ -21,7 +21,7 @@ const baseImageUrl = "https://image.tmdb.org/t/p/w500";
     .then((res)=> setMovieDetail(res?.data))
     .catch((err)=> console.log(err))
 
-  },[])
+  },[id])
   console.log("MOVIELIST",movieDetail)
  
   return (
@@ -29,7 +29,7 @@ const baseImageUrl = "https://image.tmdb.org/t/p/w500";
     <div className="App">
      <h1>{movieDetail.original_title}</h1>
      <p>{movieDetail.overview}</p>
-     <img className="detailPoster" src={baseImageUrl+movieDetail.poster_path} />
+     <img className="detailPoster" src={baseImageUrl+movieDetail.poster_path} alt={movieDetail.original_title + ".jpeg"}/>
 
     </div>
   );
