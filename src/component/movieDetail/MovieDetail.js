@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom';
-import '../../App.css'
+import './style.css'
 
 const apiKey = "29b44dc404fcd29682c29a4d22da5c75";
 const movieDetailBaseUrl = "https://api.themoviedb.org/3/movie/"
@@ -26,7 +26,7 @@ const baseImageUrl = "https://image.tmdb.org/t/p/w500";
  
   return (
 
-    <div className="App">
+    <div className="detail-wrapper">
      <h1>{movieDetail.original_title}</h1>
      <p>{movieDetail.overview}</p>
      <img className="detailPoster" src={baseImageUrl+movieDetail.poster_path} alt={movieDetail.original_title + ".jpeg"}/>

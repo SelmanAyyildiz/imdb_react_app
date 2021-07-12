@@ -1,5 +1,5 @@
 import "./style.css"
-import { movieContext } from "../../Movie";
+import { movieContext } from "../../App";
 import { Card } from "../card";
 import { useContext } from "react";
 
@@ -15,11 +15,11 @@ export const CardList = () => {
     <div className="card-list-wrapper">
       {movieList?.map((movie, index) => {
         return <Card
-         key={index}
-         id={movie.id}
+          key={index}
+          id={movie.id}
           title={movie.title}
-           poster={movie.poster_path? baseImageUrl + movie.poster_path : defaultImage} 
-           />;
+          poster={movie.poster_path? baseImageUrl + movie.poster_path : defaultImage} 
+            />;
       })}
     </div>
   );
