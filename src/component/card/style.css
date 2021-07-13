@@ -8,6 +8,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+}
+.card-wrapper :hover{
+ 
+    cursor: pointer;
 }
 .cardPoster{
 border-radius: 1rem;
