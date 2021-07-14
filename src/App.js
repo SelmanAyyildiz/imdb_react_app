@@ -10,7 +10,6 @@ const baseUrl ="https://api.themoviedb.org/3/search/movie";
 const baseImageUrl = "https://image.tmdb.org/t/p/w300";
 
 export const movieContext = createContext()
-console.log("🚀🚀🚀🚀🚀🚀🚀APP>JS", movieContext)
 
 function App() {
     const [searchKey, setSearchKey]=useState("Allah")
@@ -27,8 +26,8 @@ function App() {
     .catch((err)=> console.log(err))
 
     },[searchKey])
-    console.log("MOVIELIST",movieList)
-    console.log("SEARCHKEY",searchKey)
+    // console.log("MOVIELIST",movieList)
+    // console.log("SEARCHKEY",searchKey)
     return (
         <movieContext.Provider value={{movieList, baseImageUrl, setSearchKey}}>
             <Router>

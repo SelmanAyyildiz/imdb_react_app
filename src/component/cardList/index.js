@@ -10,7 +10,7 @@ const defaultImage ="https://image.freepik.com/free-vector/cinema-logo-with-popc
 
 export const CardList = () => {
   const{ movieList, baseImageUrl } = useContext(movieContext);
-  console.log("CARDLIST", movieList);
+  // console.log("CARDLIST", movieList);
   return (
     <div className="card-list-wrapper">
       {movieList?.map((movie, index) => {
